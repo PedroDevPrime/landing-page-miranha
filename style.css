@@ -1,0 +1,271 @@
+/* configurações gerais */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* estrutura  */
+
+.body {
+  display: flex;
+  justify-content: center;
+  background-color: #104593;
+  color: white;
+  padding: 30px;
+  height: 100%;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1380px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* navegação */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* links */
+
+.link {
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.5s;
+  animation-name: slideInBottomSoft;
+  animation-duration: 1.2s;
+}
+
+.link:hover {
+  color: #d22626;
+}
+
+/* conteúdo principal */
+
+.main {
+  display: flex;
+  flex-grow: 1;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* botões */
+
+.wrapper-btn {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.btn {
+  width: 181px;
+  height: 45px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.4s;
+  animation-name: slideInBottomSoft;
+  animation-duration: 1.2s;
+}
+
+.btn:hover {
+  transform: scale(1.2);
+}
+
+.btn-buy {
+  color: white;
+  background-color: #d22626;
+}
+
+.btn-buy:hover {
+  color: #d22626;
+  background-color: white;
+}
+
+.btn-info {
+  color: #d22626;
+}
+
+.btn-info:hover {
+  color: white;
+  background-color: #d22626;
+}
+
+/* textos */
+
+#title {
+  font-size: 2rem;
+  transition: 0.5s;
+  animation-name: slideInBottomSoft;
+  animation-duration: 1.2s;
+}
+
+.sub-title {
+  font-size: 1rem;
+  font-weight: 300;
+  transition: 0.5s;
+  animation-name: slideInBottomSoft;
+  animation-duration: 1.2s;
+}
+
+/* imagem */
+
+.wrapper-img {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: slideInBottom;
+  animation-duration: 1.2s;
+}
+
+.img-spider {
+  width: 100%;
+  height: 100%;
+  max-width: 490px;
+  max-height: 496px;
+  transition: 0.5s;
+  animation-name: actionImg;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
+/* rodapé */
+.footer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.icon-bottom {
+  cursor: pointer;
+  animation-name: iconBottom;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+.icon-top {
+  cursor: pointer;
+  animation-name: iconTop;
+  animation-duration: 0.6s;
+  animation-timing-function: ease-in-out;
+}
+
+/* responsividade */
+
+@media (max-width: 1080px) {
+  .main {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .info{
+    gap: 20px;
+  }
+  
+  #title {
+    font-size: 1.8rem;
+  }
+
+  .wrapper-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav{
+    overflow-x: scroll;
+    scrollbar-width: none
+  }
+
+  .footer{
+    justify-content: center;
+  }
+}
+
+/* animação */
+
+@keyframes slideInBottom {
+  from {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInBottomSoft {
+  from {
+    transform: translateY(-90px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes actionImg {
+  from {
+    transform: translateY(-20px);
+  }
+
+  to {
+    transform: translateY(20);
+  }
+}
+
+@keyframes iconBottom {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes iconTop {
+  from {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
